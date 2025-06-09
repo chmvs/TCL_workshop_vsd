@@ -861,11 +861,13 @@ _Screenshots_
 ![image](https://github.com/user-attachments/assets/fc6c7cb3-ca3f-4405-b38c-1a46e2c1c5f4)
 
 **.spef generation**
+
 ![image](https://github.com/user-attachments/assets/88168765-0e3f-442b-a784-f5ead84e8fca)
 
 ![image](https://github.com/user-attachments/assets/1fab9e2d-5f57-436c-a36f-9112567d4c2d)
 
 **.conf generation**
+
 ![image](https://github.com/user-attachments/assets/d154a5db-e2e4-4087-831c-b6ebc9d1a7bc)
 
 ![image](https://github.com/user-attachments/assets/b7ba4312-98c1-4905-a96b-2367d40827d3)
