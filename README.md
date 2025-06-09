@@ -79,7 +79,7 @@ set num_of_rows [m rows]
 ````
  **Variable creation**
 I have auto-cretaed variables by converting the .csv file into a matric and calculating the number of rows and columns and creating variables for each block as my_varr.
-''''
+````
 set i 0
 	while {$i < $num_of_rows} {
 		puts "\nInfo: Setting $my_arr(0,$i) as '$my_arr(1,$i)'"
@@ -99,7 +99,7 @@ puts "NetlistDirectory = $NetlistDirectory"
 puts "EarlyLibraryPath = $EarlyLibraryPath"
 puts "LateLibraryPath = $LateLibraryPath"
 puts "ConstraintsFile = $ConstraintsFile"
-''''
+````
 Converted the names into variable by removing the space between them and assigned the paths to the variables.
 _Screenshot_
 
@@ -110,7 +110,7 @@ _Screenshot_
 I have written the code to check the existence of all files and directories wherein the program exits in case they are not found since their existence is crucial for the program to move further except for the output directory, which is created if it does not exist. The basic code of the same and screenshots of the terminal demonstrating the functionality, namely one showing the creation of a new output directory and another in which an output directory exists but a constraints file does not exist, are shown below.
 
 _Code_
-''''
+````
 if {![file isdirectory $OutputDirectory]} {
 	puts "\nInfo: Cannot find output directory $OutputDirectory. Creating $OutputDirectory"
 	file mkdir $OutputDirectory
@@ -141,7 +141,7 @@ if {![file exists $ConstraintsFile]} {
 } else {
         puts "\nInfo: Contraints file found in path $ConstraintsFile"
 }
-''''
+````
 _Screenshots_
 
 ![Screenshot 2025-06-08 232350](https://github.com/user-attachments/assets/c5e65508-b28e-41b6-98b8-7ccf5c655098)
@@ -153,7 +153,7 @@ _Screenshots_
 The file was successfully processed and converted into a matrix, and the rows and columns count were extracted, as well as the starting rows of clocks, inputs, and outputs. The basic code of the same and a screenshot of the terminal with several "puts" printing out the variables are shown below.
 
 _Code_
-''''
+````
 puts "\nInfo: Dumping SDC contraints file for $DesignName"
 ::struct::matrix constraints
 set  chan [open $ConstraintsFile]
@@ -173,13 +173,14 @@ puts "input_ports_start = $input_ports_start"
 #----check row number for "inputs" section in constraints.csv------------#
 set output_ports_start [lindex [lindex [constraints search all OUTPUTS] 0 ] 1]
 puts "output_ports_start = $output_ports_start"
-''''
+````
 
 _Screenshot_
 
 ![Screenshot 2025-06-08 232624](https://github.com/user-attachments/assets/9694a3d2-a25c-4650-80b3-545522a0304f)
 
 ## Day 3 - Processing Clock and Input Constraints from CSV and dumping SDC
+
 
 
 
